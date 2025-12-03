@@ -1,0 +1,41 @@
+/* Aura Mobility Logo Size Fix */
+.g_logoimg {
+    height: 75px !important;
+    width: auto !important;
+}
+
+/* Ensure logo is visible in nav */
+.g_button.c-c_nav img {
+    max-height: 75px;
+    width: auto;
+}
+
+/* Fix navbar spacing with larger logo */
+.g_nav {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.g_nav-wrapper {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.g_nav-cont {
+    align-items: center;
+}
+
+/* Fix for Ghost Images in Carousel */
+/* Remove default background images from animation class */
+.img_home-hero_anim-1 {
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Fix for Blue Box in Carousel */
+/* Ensure container is transparent */
+.img_home_anim-wrap,
+.img_home-hero_wrap {
+    background-color: transparent !important;
+    background: transparent !important;
+}
