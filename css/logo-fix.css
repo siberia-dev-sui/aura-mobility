@@ -1,41 +1,41 @@
-/* Aura Mobility Logo Size Fix */
+/* Logo Size Fix */
 .g_logoimg {
-    height: 75px !important;
-    width: auto !important;
+    max-width: 200px;
+    height: auto;
+    width: 100%;
 }
 
-/* Ensure logo is visible in nav */
-.g_button.c-c_nav img {
-    max-height: 75px;
-    width: auto;
-}
-
-/* Fix navbar spacing with larger logo */
-.g_nav {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-}
-
-.g_nav-wrapper {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-.g_nav-cont {
-    align-items: center;
-}
-
-/* Fix for Ghost Images in Carousel */
-/* Remove default background images from animation class */
-.img_home-hero_anim-1 {
-    background-image: none !important;
-    background: none !important;
-}
-
-/* Fix for Blue Box in Carousel */
-/* Ensure container is transparent */
-.img_home_anim-wrap,
-.img_home-hero_wrap {
+/* Hero Carousel Fix - Remove empty/white slots */
+.img_home_anim-wrap {
     background-color: transparent !important;
+}
+
+/* Hero Carousel Fix - Show image as background fallback */
+.img_home-hero_wrap {
+    background-image: url('https://pub-74cd2192142e49f1a18f8ae07c45f0e3.r2.dev/Gemini_Generated_Image_mycswamycswamycs.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.img_home_anim-wrap.first {
+    /* Remove any gaps between flex items */
+    gap: 0 !important;
+}
+
+.img_home_anim-wrap.first img.img_home-hero_anim-1.static {
+    /* Ensure images shrink to fit, not expand beyond container */
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    object-fit: cover;
+}
+
+/* Ensure the carousel container doesn't show black/empty space */
+.img_home_anim-wrap.first,
+.img_home_anim-wrap.second,
+.img_home_anim-wrap.third {
     background: transparent !important;
+    overflow: hidden;
 }
